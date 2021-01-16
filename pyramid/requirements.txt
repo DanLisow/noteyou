@@ -1,0 +1,7 @@
+pyramid==1.10.5
+requests==2.13.0
+pyramid_jinja2
+mysql.connector
+redis
+SQLAlchemy
+googletrans

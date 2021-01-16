@@ -1,0 +1,82 @@
+{% extends 'main_layout.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="../static/styles/style_index.css">
+{% endblock %}
+
+{% block nav %}
+    <nav class="nav__main">
+        <a class="nav__link" href="#">Our product</a>
+        <a class="nav__link" href="#">Pricing</a>
+        <a class="nav__link" href="#">Download</a>
+        <a class="nav__link" href="#">Team</a>
+        <a class="nav__line">|</a>
+        <a class="nav__auth" href="#" data-bs-toggle="modal" data-bs-target="#login-modal" data-bs-whatever="@getbootstrap">Log in</a>
+        <a class="nav__auth" href="#" data-bs-toggle="modal" data-bs-target="#signin-modal" data-bs-whatever="@getbootstrap">Sign up</a>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <div class="main__inner">
+        <img class="main__image" src="assets/main_image.png" alt="Welcome">
+        <h1 class="main__title">All notes in one workspace</h1>
+        <p class="main__subtitle">One tool for all your ideas. Write, plan and get organized.</p>
+        <form class="form__main" action="login.py" method="POST">
+            <input class="form__input" type="text" name="login" id="login" placeholder="Your login...">
+            <input class="form__input" type="password" name="password" id="password" placeholder="Password">
+            <button class="form__button" type="submit" name= "submit" id="submit">Sign up</button>
+        </form>
+        <p class="form__subtext">Already have an account? <a class="link" href="#">Log in</a></p>
+    </div>
+{% endblock %}
+
+{% block popups %}
+    <div class="modal fade" id="signin-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="close">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal__inner">
+                        <form class="form__popup" action="login.py" method="POST">
+                            <h2 class="popup__title">Sign Up, Bro!</h2>
+                            <div class="popup__group">
+                                <input class="form__input" type="text" name="login" id="login" placeholder="Your login...">
+                            </div>
+                            <div class="popup__group">
+                                <input class="form__input" type="password" name="password" id="password" placeholder="Password">
+                            </div>
+                            <button class="form__button" type="submit" name= "submit" id="submit">Sign up</button>
+                        </form>
+                        <img class="popup_image" src="/assets/popup_image.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="login-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="close">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal__inner">
+                        <form class="form__popup" action="login.py" method="POST">
+                            <h2 class="popup__title">Log in, Bro!</h2>
+                            <div class="popup__group">
+                                <input class="form__input" type="text" name="login" id="login" placeholder="Your login...">
+                            </div>
+                            <div class="popup__group">
+                                <input class="form__input" type="password" name="password" id="password" placeholder="Password">
+                            </div>
+                            <button class="form__button" type="submit" name= "submit" id="submit">Log in</button>
+                        </form>
+                        <img class="popup_image" src="/assets/popup_image.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
