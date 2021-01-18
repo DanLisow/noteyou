@@ -1,0 +1,121 @@
+{% extends 'main_layout.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="../static/styles/style_notes.css">
+{% endblock %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block main %}
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#"><img class="logo" src="static/assets/logo.svg" alt="Note you"></a>
+                <nav class="nav">
+                    <a class="nav__link" href="#">Log out <img src="static/assets/logout.svg" alt=""></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="notes">
+        <div class="container">
+            <div class="notes__inner">
+                <h1 class="notes__title">All notes <small>({% block counter %}{{ counter_notes }}{% endblock %})</small></h1>
+                <div class="notes__main">
+
+                    <aside class="notes__aside">
+                        <div class="notes__add">
+                            <a href="#" data-toggle="modal" data-target="#form"><img src="static/assets/plus.svg" alt="">Create
+                                note</a>
+                        </div>
+                        <div class="notes__items">
+                            <ul class="nav nav-tabs" role="tablist">
+
+                                <li class="notes__item nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home-1">Название заметки #1</a>
+                                    <p>Начало текста заметки про этот проект - приложение с заметками... </p>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <div class="tab-content">
+
+                        <div class="notes__block tab-pane fade show active" id="home-1">
+                            <div class="notes__block-title">
+                                <h3>Название заметки #1</h3>
+                                <div class="notes__block-save">
+                                    <button><img src="assets/save.svg" alt="">Save changes</button>
+                                    <a href="#"><img src="static/assets/dots.svg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="notes__block-text">
+                                <p contenteditable="true">Lectus tincidunt fringilla lacus aliquam nec egestas nisi
+                                    tortor tortor. Rutrum a
+                                    lectus
+                                    nisi integer. Ut mi auctor tincidunt nullam vel scelerisque fames mi. At leo
+                                    bibendum
+                                    nec nunc. Placerat scelerisque facilisis sagittis, enim. Orci, lorem odio blandit
+                                    elementum adipiscing nisl cursus sit ut. Enim sagittis, sit sit mi mauris ut. Orci,
+                                    euismod facilisis tempor et pellentesque egestas faucibus. Mi sit rhoncus nisi,
+                                    risus
+                                    risus iaculis netus ipsum. In fames sodales sed in erat nisl. Pellentesque
+                                    consectetur
+                                    cursus nisl tortor non elit. Porta aliquet viverra egestas id purus. Id eu amet
+                                    lorem a
+                                    tellus suspendisse. Enim risus ut ut nulla posuere lectus in nunc maecenas. Blandit
+                                    pharetra feugiat placerat pulvinar amet. Ullamcorper sem aliquet accumsan risus
+                                    proin
+                                    purus interdum ultrices facilisis. Scelerisque a ultrices nulla urna non gravida
+                                    nec,
+                                    at.</p>
+                                <p>Lectus tincidunt fringilla lacus aliquam nec egestas nisi tortor tortor. Rutrum a
+                                    lectus
+                                    nisi integer. Ut mi auctor tincidunt nullam vel scelerisque fames mi. At leo
+                                    bibendum
+                                    nec nunc. Placerat scelerisque facilisis sagittis, enim. Orci, lorem odio blandit
+                                    elementum adipiscing nisl cursus sit ut. Enim sagittis, sit sit mi mauris ut. Orci,
+                                    euismod facilisis tempor et pellentesque egestas faucibus. Mi sit rhoncus nisi,
+                                    risus
+                                    risus iaculis netus ipsum. In fames sodales sed in erat nisl. Pellentesque
+                                    consectetur
+                                    cursus nisl tortor non elit. Porta aliquet viverra egestas id purus. Id eu amet
+                                    lorem a
+                                    tellus suspendisse. Enim risus ut ut nulla posuere lectus in nunc maecenas. Blandit
+                                    pharetra feugiat placerat pulvinar amet. Ullamcorper sem aliquet accumsan risus
+                                    proin
+                                    purus interdum ultrices facilisis. Scelerisque a ultrices nulla urna non gravida
+                                    nec,
+                                    at.</p>
+                                <p>Lectus tincidunt fringilla lacus aliquam nec egestas nisi tortor tortor. Rutrum a
+                                    lectus
+                                    nisi integer. Ut mi auctor tincidunt nullam vel scelerisque fames mi. At leo
+                                    bibendum
+                                    nec nunc. Placerat scelerisque facilisis sagittis, enim. Orci, lorem odio blandit
+                                    elementum adipiscing nisl cursus sit ut. Enim sagittis, sit sit mi mauris ut. Orci,
+                                    euismod facilisis tempor et pellentesque egestas faucibus. Mi sit rhoncus nisi,
+                                    risus
+                                    risus iaculis netus ipsum. In fames sodales sed in erat nisl. Pellentesque
+                                    consectetur
+                                    cursus nisl tortor non elit. Porta aliquet viverra egestas id purus. Id eu amet
+                                    lorem a
+                                    tellus suspendisse. Enim risus ut ut nulla posuere lectus in nunc maecenas. Blandit
+                                    pharetra feugiat placerat pulvinar amet. Ullamcorper sem aliquet accumsan risus
+                                    proin
+                                    purus interdum ultrices facilisis. Scelerisque a ultrices nulla urna non gravida
+                                    nec,
+                                    at.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+{% endblock %}

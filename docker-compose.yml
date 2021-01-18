@@ -5,6 +5,8 @@ services:
     image: pyramid_project/local:latest
     ports:
       - 6543:6543
+    volumes:
+      - ./pyramid
 
   db:
     image: mysql
@@ -17,6 +19,8 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - ${DB_PATH_HOST}:/var/lib/mysql
+    security_opt:
+      - seccomp:unconfined
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest

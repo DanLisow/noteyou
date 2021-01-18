@@ -4,4 +4,5 @@ pyramid_jinja2
 mysql.connector
 redis
 SQLAlchemy
+zope.sqlalchemy
 googletrans
