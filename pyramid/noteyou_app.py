@@ -59,9 +59,8 @@ def SignIn(request):
 @view_config(route_name='login')
 def login(request):
     try:
-        query = DBSession.query(User).filter(and_(
+        query = DBSession.query(User).filter((
             User.login == request.params['login'], User.password == request.params['pass']))
-        res = query.all()
         DBSession.commit()
         print(res)
         return Response("res = %s" % res)
